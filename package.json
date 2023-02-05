@@ -1,0 +1,73 @@
+{
+  "name": "react-mui-snackbar-helper",
+  "version": "1.0.1",
+  "description": "An easier way to display SnackBars, using ContextApi and Hooks ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "url": "https://github.com/samishal1998/react-mui-snackbar-helper.git",
+    "type": "git"
+  },
+  "exports": {
+    ".":  "./dist/index.js",
+    "./types": "./dist/index.d.ts",
+    "./message": "./dist/data/message.js",
+    "./provider": "./dist/snackbar/provider.js",
+    "./alert-snackbar": "./dist/snackbar/alert-snackbar.js",
+    "./package.json": "./package.json"
+  },
+  "typesVersions": {
+    "*": {
+      "message": [
+        "dist/data/message.d.ts"
+      ],
+      "alert-snackbar": [
+        "dist/snackbar/alert-snackbar.d.ts"
+      ],
+      "provider": [
+        "dist/snackbar/provider.d.ts"
+      ],
+      "default": [
+        "dist/index.d.ts"
+      ]
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean:output": "rm -rf dist",
+    "prebuild": "npm run clean:output",
+    "build": "npx tsc",
+    "prepublish": "npm run build",
+    "prepack": "npm run build"
+
+  },
+  "keywords": [
+    "mui",
+    "react",
+    "snackbar",
+    "context-api",
+    "hooks",
+    "react-hooks",
+    "material-ui",
+    "boilerplate"
+  ],
+  "author": {
+    "email": "samishal.1998@gmail.com",
+    "name": "Sami Mis'hal"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@mui/material": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
+  }
+}
